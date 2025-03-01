@@ -10,8 +10,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="/node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
-    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
 
 </head>
 
@@ -420,107 +422,9 @@
                         </div>
                     </div>
 
-                    <!-- <div class="feature-box mb-4" mb-4>
-                        <div class="img">
-                            <img src="./images/avatar5.png" alt="no">
-                        </div>
-                        <div class="content">
-                            <p class="mb-3">
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus optio nisi officiis quod
-                                suscipit asperiores.
-                            </p>
-                            <h6 class="mb-0 text-dark fw-semibold">
-                                Harish
-                            </h6>
-                            <small>Qspiders</small>
-                        </div>
-                    </div> -->
-
-                    <!-- <div class="feature-box mb-4" mb-4>
-                        <div class="img">
-                            <img src="./images/avatar6.png" alt="no">
-                        </div>
-                        <div class="content">
-                            <p class="mb-3">
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus optio nisi officiis quod
-                                suscipit asperiores.
-                            </p>
-                            <h6 class="mb-0 text-dark fw-semibold">
-                                Harish
-                            </h6>
-                            <small>Qspiders</small>
-                        </div>
-                    </div> -->
 
                 </div>
-                <!-- <div class="owl-carousel owl-theme">
-
-                    <div class="feature-box mb-4">
-                        <div class="img">
-                            <img src="./images/avatar1.png" alt="no">
-                        </div>
-                        <div class="content">
-                            <p class="mb-3">
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus optio nisi officiis quod
-                                suscipit asperiores.
-                            </p>
-                            <h6 class="mb-0 text-dark fw-semibold">
-                                Harish
-                            </h6>
-                            <small>Qspiders</small>
-                        </div>
-                    </div>
-
-                    <div class="feature-box mb-4">
-                        <div class="img">
-                            <img src="./images/avatar2.png" alt="no">
-                        </div>
-                        <div class="content">
-                            <p class="mb-3">
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus optio nisi officiis quod
-                                suscipit asperiores.
-                            </p>
-                            <h6 class="mb-0 text-dark fw-semibold">
-                                Harish
-                            </h6>
-                            <small>Qspiders</small>
-                        </div>
-                    </div>
-
-                    <div class="feature-box mb-4">
-                        <div class="img">
-                            <img src="./images/avatar3.png" alt="no">
-                        </div>
-                        <div class="content">
-                            <p class="mb-3">
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus optio nisi officiis quod
-                                suscipit asperiores.
-                            </p>
-                            <h6 class="mb-0 text-dark fw-semibold">
-                                Harish
-                            </h6>
-                            <small>Qspiders</small>
-                        </div>
-                    </div>
-
-                    <div class="feature-box mb-4">
-                        <div class="img">
-                            <img src="./images/avatar4.png" alt="no">
-                        </div>
-                        <div class="content">
-                            <p class="mb-3">
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus optio nisi officiis quod
-                                suscipit asperiores.
-                            </p>
-                            <h6 class="mb-0 text-dark fw-semibold">
-                                Harish
-                            </h6>
-                            <small>Qspiders</small>
-                        </div>
-                    </div>
-
-
-                </div> -->
+                
             </div>
         </section>
 
@@ -646,6 +550,7 @@
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
 <!-- Owl Carousel -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
 <!-- Local Scripts -->
@@ -655,6 +560,22 @@
 
 
     <script>
+
+    $(document).ready(function(){
+        $(".owl-carousel").owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            dots: true,
+            responsive:{
+                0:{ items: 1 },
+                600:{ items: 2 },
+                1000:{ items: 3 }
+            }
+        });
+    });
+
+
 
         $(window).on("scroll", function () {
             var scrollTop = $(window).scrollTop();
